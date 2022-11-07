@@ -1,0 +1,17 @@
+:root {
+  --mainWelcomeBoxShadow: hsla(0, 0%, 15%, 0.5);
+}
+
+main div.container div {
+  padding: 10px 0;
+}
+main div.container div h1 {
+  font-size: 2rem;
+  padding-bottom: 10px;
+  padding-top: 25px;
+}
+main div.container div img {
+  border-radius: 10px;
+  width: 25%;
+  box-shadow: 0px 0px 15px var(--mainWelcomeBoxShadow);
+}

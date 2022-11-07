@@ -1,0 +1,132 @@
+:root {
+  --mainDayBgColor: hsla(0, 0%, 80%, 0.25);
+  --mainDayColorH2: hsla(0, 0%, 50%, 1);
+  --mainDayColorH5: hsla(0, 0%, 60%, 1);
+  --mainDayTimeColor: hsla(0, 0%, 25%, 1);
+  --mainDayCheckerOne: hsla(0, 0%, 90%, 1);
+  --mainDayCheckerTwo: hsla(0, 0%, 100%, 1);
+  --mainDayTimeHover: hsla(86, 100%, 87%, 0.884);
+  --mainDayOccupied: hsla(0, 45%, 76%, 0.9);
+}
+
+main div.container div.menu {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 0px;
+  text-align: center;
+  align-items: end;
+  padding: 15px;
+}
+main div.container div.menu div.prev,
+main div.container div.menu div.next {
+  font-size: 0.9rem;
+}
+main div.container div.menu div.center {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+main div.container div.menu div.center select {
+  border: none;
+  padding: 0 10px;
+  margin: 0;
+  background-color: transparent;
+  color: var(--mainDayColorH5);
+  font-size: 1.3rem;
+  font-weight: normal;
+  border: none;
+  outline: none;
+}
+main div.container div.menu div.center select option {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  border: none;
+}
+
+main div.container div.kalender {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-rows: 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 0px;
+  text-align: center;
+}
+main div.container div.kalender div.days {
+  padding: 5px;
+  border-radius: 5px;
+}
+main div.container div.kalender div.days {
+  background-color: var(--mainDayBgColor);
+}
+
+main div.container div.kalender div.days div.day:first-child h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: var(--mainDayColorH2);
+}
+main div.container div.kalender div.days div.day:first-child h5 {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  color: var(--mainDayColorH5);
+  font-weight: normal;
+}
+main div.container div.kalender div.days div.time {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 3px;
+  color: var(--mainDayTimeColor);
+}
+main div.container div.kalender div.days div.time:last-child {
+  margin-bottom: 0;
+}
+main div.container div.kalender div.days div.time:nth-child(even) {
+  background-color: var(--mainDayCheckerOne);
+}
+main div.container div.kalender div.days div.time:nth-child(odd) {
+  background-color: var(--mainDayCheckerTwo);
+}
+main div.container div.kalender div.days div.time:hover:not(.taken) {
+  background-color: var(--mainDayTimeHover);
+  cursor: pointer;
+}
+
+main div.container div.kalender div.days div.time.taken {
+  cursor: not-allowed;
+  background-color: var(--mainDayOccupied);
+  opacity: 0.25;
+  text-decoration: line-through;
+}
+
+main div.container div.form {
+  margin-top: 50px;
+  text-align: center;
+}
+main div.container div.form input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 3px 8px;
+}
+main div.container div.form input:focus {
+  outline: none;
+}
+main div.container div.form label {
+  padding: 0 15px;
+}
+main div.container div.form button {
+  margin-top: 20px;
+  width: 60%;
+  padding: 10px;
+}
+
+main div.container div.form fieldset {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+main div.container div.form fieldset legend {
+  padding: 0 10px;
+}
