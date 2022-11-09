@@ -108,6 +108,7 @@ main div.container a:hover {
 
 footer {
   padding-top: 5vh;
+  margin-bottom: 5vh;
 }
 footer div.wrapper {
   margin: 0 auto;
