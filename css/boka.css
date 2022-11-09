@@ -153,33 +153,17 @@ div.kalender div.days label:hover:not(.taken) {
   background-color: var(--mainDayTimeHover);
 }
 
-/*
-
-main div.container div.kalender div.days div.time {
+div#displayBook {
+  display: none;
+  position: fixed;
+  background-color: #fff;
+  border-top: 5px solid pink;
+  border-right: 5px solid pink;
+  border-top-right-radius: 10px;
   padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 3px;
-  color: var(--mainDayTimeColor);
+  width: 250px;
+  height: 250px;
+  bottom: 0;
+  left: 0;
+  z-index: 1999;
 }
-main div.container div.kalender div.days div.time:last-child {
-  margin-bottom: 0;
-}
-main div.container div.kalender div.days div.time:nth-child(even) {
-  background-color: var(--mainDayCheckerOne);
-}
-main div.container div.kalender div.days div.time:nth-child(odd) {
-  background-color: var(--mainDayCheckerTwo);
-}
-main div.container div.kalender div.days div.time:hover:not(.taken) {
-  background-color: var(--mainDayTimeHover);
-  cursor: pointer;
-}
-
-main div.container div.kalender div.days div.time.taken {
-  cursor: not-allowed;
-  background-color: var(--mainDayOccupied);
-  opacity: 0.25;
-  text-decoration: line-through;
-}
-
-*/
