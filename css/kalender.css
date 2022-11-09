@@ -17,6 +17,11 @@ main div.container div.menu {
   align-items: end;
   padding: 15px;
 }
+main div.container div.menu div.previous,
+main div.container div.menu div.next {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
 main div.container div.menu div button {
   font-size: 0.9rem;
   background-color: transparent;
