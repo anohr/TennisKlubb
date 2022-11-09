@@ -17,13 +17,24 @@ main div.container div.menu {
   align-items: end;
   padding: 15px;
 }
-main div.container div.menu div.prev,
-main div.container div.menu div.next {
+main div.container div.menu div button {
   font-size: 0.9rem;
+  background-color: transparent;
+  border: none;
+  color: var(--mainLinkColor);
+  cursor: pointer;
+}
+main div.container div.menu div button:hover {
+  color: var(--mainLinkColorHover);
 }
 
 main div.container div.menu div.center {
   font-size: 1.6rem;
+  font-weight: normal;
+}
+
+main div.container div.menu div.center h5 {
+  font-size: 1rem;
   font-weight: normal;
 }
 
@@ -49,18 +60,23 @@ main div.container div.days div.day {
   border-radius: 5px;
   color: var(--mainKalenderColor);
 }
-main div.container div.days div.day:nth-child(even):not(.disable) {
+main div.container div.days div.day:nth-child(even) {
   background-color: var(--mainKalenderCheckerBgColorOne);
 }
 
-main div.container div.days div.day:nth-child(odd):not(.disable) {
+main div.container div.days div.day:nth-child(odd) {
   background-color: var(--mainKalenderCheckerBgColorTwo);
 }
 
 main div.container div.days div.day.disable {
   opacity: 0.5;
+  background-color: transparent;
 }
 
 main div.container div.days div.day:hover:not(.disable) {
+  background-color: var(--mainKalenderHoverChecker);
+}
+
+main div.container div.days div.day.today {
   background-color: var(--mainKalenderHoverChecker);
 }

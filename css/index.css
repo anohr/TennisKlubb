@@ -13,7 +13,7 @@ main div.container div h1 {
 main div.container div.welcome {
   text-align: center;
   padding-top: 20vh;
-  height: 50vh;
+  min-height: 50vh;
   background-image: url("../img/rackets.jpg");
   border-radius: 10px;
   box-shadow: var(--footerWrapBoxShadowOne) 0px 1px 2px 0px, var(--footerWrapBoxShadowTwo) 0px 2px 6px 2px;

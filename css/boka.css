@@ -5,7 +5,7 @@
   --mainDayTimeColor: hsla(0, 0%, 25%, 1);
   --mainDayCheckerOne: hsla(0, 0%, 90%, 1);
   --mainDayCheckerTwo: hsla(0, 0%, 100%, 1);
-  --mainDayTimeHover: hsla(86, 100%, 87%, 0.884);
+  --mainDayTimeHover: hsla(86, 100%, 87%, 0.5);
   --mainDayOccupied: hsla(0, 45%, 76%, 0.9);
 }
 
@@ -64,16 +64,96 @@ main div.container div.kalender div.days {
 }
 
 main div.container div.kalender div.days div.day:first-child h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: normal;
   color: var(--mainDayColorH2);
 }
 main div.container div.kalender div.days div.day:first-child h5 {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin-bottom: 10px;
   color: var(--mainDayColorH5);
   font-weight: normal;
 }
+
+main div.container fieldset {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+main div.container fieldset {
+  margin-top: 15px;
+}
+main div.container fieldset:first-child {
+  margin-top: 0;
+}
+main div.container fieldset legend {
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+main div.container div.form input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 3px 8px;
+}
+main div.container div.form input:focus {
+  outline: none;
+}
+main div.container div.form label {
+  display: inline-block;
+  width: 210px;
+  padding: 0 15px;
+  text-align: right;
+}
+main div.container button {
+  margin-top: 20px;
+  width: 15vw;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+div.kalender div.days input {
+  display: none;
+}
+
+div.kalender div.days label {
+  display: inline-block;
+  padding: 10px 0;
+  margin-bottom: 5px;
+  width: 100%;
+  border-radius: 5px;
+  color: rgba(51, 51, 51, 0.658);
+}
+div.kalender div.days label:last-child {
+  margin-bottom: 0;
+}
+
+div.kalender div.days input:checked + label {
+  background: var(--mainDayTimeHover);
+  color: rgb(51, 51, 51);
+}
+
+div.kalender div.days label:nth-of-type(even) {
+  background-color: var(--mainDayCheckerOne);
+}
+div.kalender div.days label:nth-of-type(odd) {
+  background-color: var(--mainDayCheckerTwo);
+}
+
+div.kalender div.days label.taken {
+  cursor: not-allowed;
+  opacity: 0.25;
+  text-decoration: line-through;
+  background-color: var(--mainDayOccupied);
+  color: #666;
+}
+div.kalender div.days label:hover:not(.taken) {
+  background-color: var(--mainDayTimeHover);
+}
+
+/*
+
 main div.container div.kalender div.days div.time {
   padding: 10px;
   border-radius: 5px;
@@ -101,32 +181,4 @@ main div.container div.kalender div.days div.time.taken {
   text-decoration: line-through;
 }
 
-main div.container div.form {
-  margin-top: 50px;
-  text-align: center;
-}
-main div.container div.form input {
-  border: none;
-  border-bottom: 1px solid #ccc;
-  padding: 3px 8px;
-}
-main div.container div.form input:focus {
-  outline: none;
-}
-main div.container div.form label {
-  padding: 0 15px;
-}
-main div.container div.form button {
-  margin-top: 20px;
-  width: 60%;
-  padding: 10px;
-}
-
-main div.container div.form fieldset {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-main div.container div.form fieldset legend {
-  padding: 0 10px;
-}
+*/
