@@ -3,6 +3,12 @@
   --mainH1Color: hsla(0, 0%, 100%, 1);
   --mainTextShadow: hsla(0, 0%, 15%, 1);
   --mainWelcomeBoxShadow: hsla(0, 0%, 15%, 0.5);
+  --mainKalenderBgColor: hsla(0, 0%, 80%, 0.25);
+  --mainKalenderColor: hsla(0, 0%, 60%, 0.99);
+  --mainKalenderDayBgColor: hsla(0, 0%, 25%, 1);
+  --mainKalenderCheckerBgColorOne: hsla(0, 0%, 90%, 1);
+  --mainKalenderCheckerBgColorTwo: hsla(0, 0%, 100%, 1);
+  --mainKalenderHoverChecker: hsla(86, 100%, 87%, 0.884);
 }
 
 main div.container div h1 {
@@ -22,4 +28,83 @@ main div.container div.welcome h1 {
   font-size: 4rem;
   color: var(--mainH1Color);
   text-shadow: 0px 0px 15px var(--mainTextShadow);
+}
+
+main div.container div.menu {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 0px;
+  text-align: center;
+  align-items: end;
+  padding: 15px;
+}
+main div.container div.menu div.previous,
+main div.container div.menu div.next {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+main div.container div.menu div button {
+  font-size: 0.9rem;
+  background-color: transparent;
+  border: none;
+  color: var(--mainLinkColor);
+  cursor: pointer;
+}
+main div.container div.menu div button:hover {
+  color: var(--mainLinkColorHover);
+}
+
+main div.container div.menu div.center {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+main div.container div.menu div.center h5 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+main div.container div.days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 5px 5px;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--mainKalenderBgColor);
+  border-radius: 2px;
+  padding: 5px;
+}
+main div.container div.days div.dayLabel {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+main div.container div.days div.day {
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--mainKalenderColor);
+}
+main div.container div.days div.day:nth-child(even) {
+  background-color: var(--mainKalenderCheckerBgColorOne);
+}
+
+main div.container div.days div.day:nth-child(odd) {
+  background-color: var(--mainKalenderCheckerBgColorTwo);
+}
+
+main div.container div.days div.day.disable {
+  opacity: 0.5;
+  background-color: transparent;
+}
+
+main div.container div.days div.day:hover:not(.disable) {
+  background-color: var(--mainKalenderHoverChecker);
+}
+
+main div.container div.days div.day.today {
+  background-color: var(--mainKalenderHoverChecker);
 }
