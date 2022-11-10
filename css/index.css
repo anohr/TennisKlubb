@@ -1,4 +1,6 @@
 :root {
+  --mainLink: hsla(350, 100%, 73%, 0.99);
+  --mainLinkHover: hsla(350, 100%, 73%, 0.5);
   --mainH1: hsla(0, 0%, 100%, 1);
   --mainWelcomeTextShadow: hsla(0, 0%, 15%, 0.5);
   --mainKalenderBg: hsla(0, 0%, 80%, 0.25);
@@ -9,20 +11,14 @@
   --mainKalenderToday: hsla(86, 100%, 87%, 0.884);
 }
 
-main div.container div h1 {
-  font-size: 2rem;
-  font-weight: normal;
-}
-
 main div.container div.welcome {
   text-align: center;
-  padding-top: 20vh;
-  min-height: 50vh;
   background-image: url("../img/rackets.jpg");
-  border-radius: 10px;
+  border-radius: 7px;
+  padding: 20px 0;
 }
 main div.container div.welcome h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--mainH1);
   text-shadow: 3px 0px 7px var(--mainWelcomeTextShadow), -3px 0px 7px var(--mainWelcomeTextShadow), 0px 4px 7px var(--mainWelcomeTextShadow);
 }
@@ -63,6 +59,14 @@ main div.container div.menu div.center h5 {
   font-weight: normal;
 }
 
+main div.container a {
+  color: var(--mainLink);
+  text-decoration: none;
+}
+main div.container a:hover {
+  color: var(--mainLinkHover);
+}
+
 main div.container div.days {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -75,12 +79,12 @@ main div.container div.days {
 }
 main div.container div.days div.dayLabel {
   text-align: center;
-  font-size: 1.5rem;
-  padding: 10px;
+  font-size: 1.2rem;
+  padding: 10px 0;
 }
 
 main div.container div.days div.day {
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 10px;
   border-radius: 5px;
 }

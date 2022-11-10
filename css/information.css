@@ -14,5 +14,5 @@ main div.container div i {
 }
 main div.container div img {
   border-radius: 5px;
-  width: 40vh;
+  max-width: 50%;
 }

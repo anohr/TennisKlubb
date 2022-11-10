@@ -11,7 +11,7 @@ const renderCalendar = () => {
   const nextDays = 7 - lastDayIndex - 1;
   const months = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December"];
 
-  document.querySelector(".menu .center").innerHTML = months[date.getMonth()] + "<br /><h5>" + date.getFullYear() + "</h5>";
+  document.querySelector(".menu .center").innerHTML = "<h5>" + date.getFullYear() + "</h5>" + months[date.getMonth()];
 
   let days = `<div class="dayLabel">Måndag</div>
   <div class="dayLabel">Tisdag</div>

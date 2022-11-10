@@ -9,9 +9,6 @@
   --navLink: var(--logoFont);
   --navLinkHover: var(--logoFontSecond);
 
-  --mainLink: hsla(350, 100%, 73%, 0.99);
-  --mainLinkHover: hsla(350, 100%, 73%, 0.5);
-
   --topButton: hsla(0, 0%, 100%, 1);
   --topButtonBg: hsla(0, 0%, 33%, 0.4);
   --topButtonBgHover: hsla(0, 0%, 33%, 0.2);
@@ -98,13 +95,6 @@ main div.container {
 main div.container:first-child() {
   margin-top: 0;
 }
-main div.container a {
-  color: var(--mainLink);
-  text-decoration: none;
-}
-main div.container a:hover {
-  color: var(--mainLinkHover);
-}
 
 footer {
   margin: 25px 0;
@@ -140,7 +130,7 @@ footer div.wrapper div.bottom {
   nav,
   main div.container,
   footer div.wrapper {
-    max-width: 310px;
+    max-width: 98%;
   }
 }
 @media screen and (min-width: 480px) {
