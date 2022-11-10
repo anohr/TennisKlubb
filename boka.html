@@ -14,7 +14,7 @@
     <header>
       <nav>
         <div class="logo">
-          <a href="./index.html" title="Hem">.NET <span>Tennis</span> Klubb</a>
+          <a href="index.html" title="Hem">.NET <span>Tennis</span> Klubb</a>
         </div>
         <div class="menu">
           <a href="information.html">Information</a>
@@ -30,7 +30,11 @@
             <div class="form">
               <div>
                 <label for="spelare">Antal spelare (2-4):</label>
-                <input type="number" id="spelare" name="spelare" value="2" min="2" max="4" /><br />
+                <select class="spelare" name="spelare" required>
+                  <option value="2">2 spelare</option>
+                  <option value="3">3 spelare</option>
+                  <option value="4">4 spelare</option>
+                </select>
               </div>
             </div>
           </fieldset>
@@ -39,9 +43,9 @@
             <div class="form">
               <div>
                 <label for="fnamn">Förnamn </label>
-                <input type="text" id="fnamn" name="fname" /><br />
+                <input type="text" id="fnamn" name="fname" required /><br />
                 <label for="enamn">Efternamn </label>
-                <input type="text" id="enamn" name="ename" /><br />
+                <input type="text" id="enamn" name="ename" required /><br />
               </div>
             </div>
           </fieldset>
@@ -50,9 +54,9 @@
             <div class="form">
               <div>
                 <label for="bastuj">Ja</label>
-                <input type="radio" id="bastu" name="bastu" value="ja" />
+                <input type="radio" id="bastu" name="bastu" value="ja" required />
                 <label for="bastun">Nej</label>
-                <input type="radio" id="bastu" name="bastu" value="nej" checked />
+                <input type="radio" id="bastu" name="bastu" value="nej" checked required />
               </div>
             </div>
           </fieldset>
@@ -62,7 +66,7 @@
               <div class="previous">« <a>förra veckan</a></div>
               <div class="center">
                 Boka tid på
-                <select class="bana" name="bana">
+                <select class="bana" name="bana" required>
                   <option value="1">Bana 1</option>
                   <option value="2">Bana 2</option>
                   <option value="3">Bana 3</option>

@@ -1,12 +1,14 @@
 :root {
-  --mainDayBgColor: hsla(0, 0%, 80%, 0.25);
-  --mainDayColorH2: hsla(0, 0%, 50%, 1);
-  --mainDayColorH5: hsla(0, 0%, 60%, 1);
-  --mainDayTimeColor: hsla(0, 0%, 25%, 1);
+  --mainDayBg: hsla(0, 0%, 80%, 0.25);
+  --mainDayH2: hsla(0, 0%, 50%, 1);
+  --mainDayH5: hsla(0, 0%, 60%, 1);
+  --mainDayTime: hsla(0, 0%, 25%, 1);
+  --mainFieldset: hsla(0, 0%, 80%, 0.5);
   --mainDayCheckerOne: hsla(0, 0%, 90%, 1);
   --mainDayCheckerTwo: hsla(0, 0%, 100%, 1);
   --mainDayTimeHover: hsla(86, 100%, 87%, 0.5);
   --mainDayOccupied: hsla(0, 45%, 76%, 0.9);
+  --mainKalenderLabel: hsla(0, 0%, 20%, 0.658);
 }
 
 main div.container div.menu {
@@ -34,14 +36,13 @@ main div.container div.menu div.center select {
   padding: 0 10px;
   margin: 0;
   background-color: transparent;
-  color: var(--mainDayColorH5);
+  color: var(--mainDayH5);
   font-size: 1.3rem;
   font-weight: normal;
   border: none;
   outline: none;
 }
 main div.container div.menu div.center select option {
-  background-color: #fff;
   padding: 0;
   margin: 0;
   font-weight: normal;
@@ -61,25 +62,25 @@ main div.container div.kalender div.days {
   border-radius: 5px;
 }
 main div.container div.kalender div.days {
-  background-color: var(--mainDayBgColor);
+  background-color: var(--mainDayBg);
 }
 
 main div.container div.kalender div.days div.day:first-child h2 {
   font-size: 1.3rem;
   font-weight: normal;
-  color: var(--mainDayColorH2);
+  color: var(--mainDayH2);
 }
 main div.container div.kalender div.days div.day:first-child h5 {
   font-size: 0.7rem;
   margin-bottom: 10px;
-  color: var(--mainDayColorH5);
+  color: var(--mainDayH5);
   font-weight: normal;
 }
 
 main div.container fieldset {
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--mainFieldset);
 }
 main div.container fieldset {
   margin-top: 15px;
@@ -94,7 +95,7 @@ main div.container fieldset legend {
 
 main div.container div.form input {
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--mainFieldset);
   padding: 3px 8px;
 }
 main div.container div.form input:focus {
@@ -102,7 +103,6 @@ main div.container div.form input:focus {
 }
 main div.container div.form label {
   display: inline-block;
-  width: 210px;
   padding: 0 15px;
   text-align: right;
 }
@@ -110,7 +110,7 @@ main div.container button {
   margin-top: 20px;
   width: 15vw;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--mainFieldset);
   padding: 10px;
 }
 
@@ -124,7 +124,7 @@ div.kalender div.days label {
   margin-bottom: 5px;
   width: 100%;
   border-radius: 5px;
-  color: rgba(51, 51, 51, 0.658);
+  color: var(--mainKalenderLabel);
 }
 div.kalender div.days label:last-child {
   margin-bottom: 0;
@@ -147,12 +147,12 @@ div.kalender div.days label.taken {
   opacity: 0.25;
   text-decoration: line-through;
   background-color: var(--mainDayOccupied);
-  color: #666;
 }
 div.kalender div.days label:hover:not(.taken) {
   background-color: var(--mainDayTimeHover);
 }
 
+/* TEMP BOX */
 div#displayBook {
   display: none;
   position: fixed;

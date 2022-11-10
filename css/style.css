@@ -1,22 +1,20 @@
 :root {
-  --fontColorBase: hsla(0, 0%, 63%, 0.75);
-  --headerBgColor: hsla(0, 0%, 100%, 0.99);
-  --logoFontColorSecond: hsla(0, 59%, 58%, 0.75);
-  --navBoxShadow: hsla(0, 0%, 0%, 0.2);
-  --navMenuColor: hsla(0, 0%, 53%, 1);
-  --menuTextHoverColor: var(--logoFontColorSecond);
-  --menuLinkHoverBgColor: hsla(0, 0%, 98%, 1);
-  --menuDropLinkHoverBgColor: hsla(0, 0%, 89%, 1);
-  --mainLinkColor: hsla(350, 100%, 88%, 1);
-  --mainLinkColorHover: hsla(350, 100%, 88%, 0.75);
-  --footerWrapBgColor: hsla(0, 0%, 87%, 0.178);
-  --footerWrapColor: var(--fontColorBase);
-  --footerWrapLinkColor: hsla(0, 0%, 50%, 1);
-  --footerWrapBoxShadowOne: hsla(206, 6%, 25%, 0.3);
-  --footerWrapBoxShadowTwo: hsla(206, 6%, 25%, 0.15);
-  --topButtonBgColor: hsla(0, 0%, 33%, 0.4);
-  --topButtonHoverBgColor: hsla(0, 0%, 33%, 0.2);
-  --topButtonColor: hsla(0, 0%, 100%, 1);
+  --font: hsla(0, 0%, 63%, 0.75);
+
+  --headerBg: hsla(0, 0%, 100%, 0.99);
+
+  --logoFont: var(--navMenu);
+  --logoFontSecond: hsla(0, 59%, 58%, 0.75);
+
+  --navLink: var(--logoFont);
+  --navLinkHover: var(--logoFontSecond);
+
+  --mainLink: hsla(350, 100%, 73%, 0.99);
+  --mainLinkHover: hsla(350, 100%, 73%, 0.5);
+
+  --topButton: hsla(0, 0%, 100%, 1);
+  --topButtonBg: hsla(0, 0%, 33%, 0.4);
+  --topButtonBgHover: hsla(0, 0%, 33%, 0.2);
 }
 
 * {
@@ -24,15 +22,13 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-html,
-body {
-  margin-top: 3.2rem;
-  margin-bottom: 2rem;
-  color: var(--fontColorBase);
+html {
   font-family: "Roboto Condensed", sans-serif;
   font-size: calc(10px + 0.4vw);
-  height: 100%;
+  margin-top: 3rem;
+}
+body {
+  color: var(--font);
 }
 
 header,
@@ -50,7 +46,7 @@ header {
   left: 0;
   width: 100%;
   height: 5rem;
-  background-color: var(--headerBgColor);
+  background-color: var(--headerBg);
 }
 
 header nav {
@@ -60,17 +56,17 @@ header nav {
   align-items: center;
   justify-content: center;
   height: 100%;
-  gap: 0px 10px;
   margin: 0 auto;
+  padding: 5px 10px;
 }
 
 header nav div.logo a {
-  font-size: 2.5rem;
-  color: var(--navMenuColor);
+  font-size: 2rem;
+  color: var(--logoFont);
   text-decoration: none;
 }
 header nav div.logo span {
-  color: var(--logoFontColorSecond);
+  color: var(--logoFontSecond);
 }
 
 header nav div.menu {
@@ -82,97 +78,93 @@ header nav div.menu {
   text-align: right;
 }
 header nav div.menu a {
-  color: var(--navMenuColor);
+  color: var(--navLink);
   display: inline-block;
   text-align: center;
-  padding: 8px 15px;
   text-decoration: none;
 }
-header nav div.menu a:hover {
-  color: var(--menuTextHoverColor);
+header nav div.menu a:first-child {
+  padding-right: 15px;
 }
+header nav div.menu a:hover {
+  color: var(--navLinkHover);
+}
+
 main div.container {
   margin: 0 auto;
   margin-top: 30px;
+  padding: 5px;
 }
 main div.container:first-child() {
   margin-top: 0;
 }
 main div.container a {
-  color: var(--mainLinkColor);
+  color: var(--mainLink);
   text-decoration: none;
 }
 main div.container a:hover {
-  color: var(--mainLinkColorHover);
+  color: var(--mainLinkHover);
 }
 
 footer {
-  padding-top: 5vh;
-  margin-bottom: 5vh;
+  margin: 25px 0;
 }
 footer div.wrapper {
   margin: 0 auto;
-  background-color: var(--footerWrapBgColor);
-  box-shadow: var(--footerWrapBoxShadowOne) 0px 1px 2px 0px, var(--footerWrapBoxShadowTwo) 0px 2px 6px 2px;
 }
 footer div.wrapper div.bottom {
-  padding: 10px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-align: center;
-  line-height: 20px;
-  color: var(--footerWrapColor);
-}
-footer div.wrapper div.bottom a {
-  padding: 0 5px;
-  text-decoration: none;
-  color: var(--footerWrapLinkColor);
-}
-footer div.wrapper div.bottom a:hover {
-  opacity: 0.5;
 }
 
 #myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  background-color: var(--topButtonBgColor); /* Set a background color */
-  color: var(--topButtonColor); /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 10px 20px 15px 20px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 1.2rem; /* Increase font size */
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  background-color: var(--topButtonBg);
+  color: var(--topButton);
+  cursor: pointer;
+  padding: 10px 20px 15px 20px;
+  border-radius: 10px;
+  font-size: 1.2rem;
   transition: background-color 100ms;
   text-decoration: none;
 }
-
 #myBtn:hover {
-  background-color: var(--topButtonHoverBgColor);
+  background-color: var(--topButtonBgHover);
 }
 
-@media (min-width: 480px) {
+@media screen and (min-width: 320px) {
+  nav,
+  main div.container,
+  footer div.wrapper {
+    max-width: 310px;
+  }
+}
+@media screen and (min-width: 480px) {
   nav,
   main div.container,
   footer div.wrapper {
     max-width: 470px;
   }
 }
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   nav,
   main div.container,
   footer div.wrapper {
     max-width: 590px;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   nav,
   main div.container,
   footer div.wrapper {
     max-width: 758px;
   }
 }
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   nav,
   main div.container,
   footer div.wrapper {

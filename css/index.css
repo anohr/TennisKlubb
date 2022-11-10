@@ -1,14 +1,12 @@
 :root {
-  --mainColor: hsla(0, 0%, 25%, 1);
-  --mainH1Color: hsla(0, 0%, 100%, 1);
-  --mainTextShadow: hsla(0, 0%, 15%, 1);
-  --mainWelcomeBoxShadow: hsla(0, 0%, 15%, 0.5);
-  --mainKalenderBgColor: hsla(0, 0%, 80%, 0.25);
-  --mainKalenderColor: hsla(0, 0%, 60%, 0.99);
-  --mainKalenderDayBgColor: hsla(0, 0%, 25%, 1);
-  --mainKalenderCheckerBgColorOne: hsla(0, 0%, 90%, 1);
-  --mainKalenderCheckerBgColorTwo: hsla(0, 0%, 100%, 1);
-  --mainKalenderHoverChecker: hsla(86, 100%, 87%, 0.884);
+  --mainH1: hsla(0, 0%, 100%, 1);
+  --mainWelcomeTextShadow: hsla(0, 0%, 15%, 0.5);
+  --mainKalenderBg: hsla(0, 0%, 80%, 0.25);
+  --mainKalenderDayBg: hsla(0, 0%, 25%, 1);
+  --mainKalenderCheckerBgOne: hsla(0, 0%, 90%, 1);
+  --mainKalenderCheckerBgTwo: hsla(0, 0%, 100%, 1);
+  --mainKalenderHoverChecker: hsla(298, 100%, 94%, 0.884);
+  --mainKalenderToday: hsla(86, 100%, 87%, 0.884);
 }
 
 main div.container div h1 {
@@ -22,12 +20,11 @@ main div.container div.welcome {
   min-height: 50vh;
   background-image: url("../img/rackets.jpg");
   border-radius: 10px;
-  box-shadow: var(--footerWrapBoxShadowOne) 0px 1px 2px 0px, var(--footerWrapBoxShadowTwo) 0px 2px 6px 2px;
 }
 main div.container div.welcome h1 {
   font-size: 4rem;
-  color: var(--mainH1Color);
-  text-shadow: 0px 0px 15px var(--mainTextShadow);
+  color: var(--mainH1);
+  text-shadow: 3px 0px 7px var(--mainWelcomeTextShadow), -3px 0px 7px var(--mainWelcomeTextShadow), 0px 4px 7px var(--mainWelcomeTextShadow);
 }
 
 main div.container div.menu {
@@ -49,11 +46,11 @@ main div.container div.menu div button {
   font-size: 0.9rem;
   background-color: transparent;
   border: none;
-  color: var(--mainLinkColor);
+  color: var(--mainLink);
   cursor: pointer;
 }
 main div.container div.menu div button:hover {
-  color: var(--mainLinkColorHover);
+  color: var(--mainLinkHover);
 }
 
 main div.container div.menu div.center {
@@ -72,7 +69,7 @@ main div.container div.days {
   gap: 5px 5px;
   text-align: center;
   justify-content: center;
-  background-color: var(--mainKalenderBgColor);
+  background-color: var(--mainKalenderBg);
   border-radius: 2px;
   padding: 5px;
 }
@@ -86,14 +83,13 @@ main div.container div.days div.day {
   font-size: 1.5rem;
   padding: 10px;
   border-radius: 5px;
-  color: var(--mainKalenderColor);
 }
 main div.container div.days div.day:nth-child(even) {
-  background-color: var(--mainKalenderCheckerBgColorOne);
+  background-color: var(--mainKalenderCheckerBgOne);
 }
 
 main div.container div.days div.day:nth-child(odd) {
-  background-color: var(--mainKalenderCheckerBgColorTwo);
+  background-color: var(--mainKalenderCheckerBgTwo);
 }
 
 main div.container div.days div.day.disable {
@@ -106,5 +102,5 @@ main div.container div.days div.day:hover:not(.disable) {
 }
 
 main div.container div.days div.day.today {
-  background-color: var(--mainKalenderHoverChecker);
+  background-color: var(--mainKalenderToday);
 }
