@@ -16,15 +16,15 @@ const renderCalendar = () => {
       let r = Math.floor(Math.random() * 10) + 1;
       if (r < 7) {
         if (i < 4) {
-          days += `<input type="radio" id="radioApple${x}" name="tid" value="${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} 0${i + 6}:00"><label for="radioApple${x}">0${i + 6}:00</label>`;
+          days += `<input type="radio" id="${x}" name="tid" value="${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} 0${i + 6}:00"><label for="${x}">0${i + 6}:00</label>`;
         } else {
-          days += `<input type="radio" id="radioApple${x}" name="tid" value="${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${i + 6}:00"><label for="radioApple${x}">${i + 6}:00</label>`;
+          days += `<input type="radio" id="${x}" name="tid" value="${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${i + 6}:00"><label for="${x}">${i + 6}:00</label>`;
         }
       } else {
         if (i < 4) {
-          days += `<input type="radio" id="radioApple${x}" name="tid" value="${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} 0${i + 6}:00" disabled><label class="taken" for="radioApple${x}">0${i + 6}:00</label>`;
+          days += `<input type="radio" id="${x}" name="tid" value="${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} 0${i + 6}:00" disabled><label class="taken" for="${x}">0${i + 6}:00</label>`;
         } else {
-          days += `<input type="radio" id="radioApple${x}" name="tid" value="${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${i + 6}:00" disabled><label class="taken" for="radioApple${x}">${i + 6}:00</label>`;
+          days += `<input type="radio" id="${x}" name="tid" value="${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${i + 6}:00" disabled><label class="taken" for="${x}">${i + 6}:00</label>`;
         }
       }
       x++;

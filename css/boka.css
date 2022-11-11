@@ -23,11 +23,11 @@ main div.container div.menu {
 }
 main div.container div.menu div.previous,
 main div.container div.menu div.next {
-  font-size: 0.9rem;
+  font-size: 0.1rem;
   cursor: pointer;
 }
 main div.container div.menu div.center {
-  font-size: 1.6rem;
+  font-size: 0.2rem;
   font-weight: normal;
 }
 
@@ -37,7 +37,7 @@ main div.container div.menu div.center select {
   margin: 0;
   background-color: transparent;
   color: var(--mainDayH5);
-  font-size: 1.3rem;
+  font-size: 0.2rem;
   font-weight: normal;
   border: none;
   outline: none;
@@ -66,12 +66,12 @@ main div.container div.kalender div.days {
 }
 
 main div.container div.kalender div.days div.day:first-child h2 {
-  font-size: 1.3rem;
+  font-size: 0.2rem;
   font-weight: normal;
   color: var(--mainDayH2);
 }
 main div.container div.kalender div.days div.day:first-child h5 {
-  font-size: 0.7rem;
+  font-size: 0.11rem;
   margin-bottom: 10px;
   color: var(--mainDayH5);
   font-weight: normal;
@@ -90,7 +90,6 @@ main div.container fieldset:first-child {
 }
 main div.container fieldset legend {
   padding: 0 10px;
-  font-weight: bold;
 }
 
 main div.container div.form input {
@@ -125,6 +124,7 @@ div.kalender div.days label {
   width: 100%;
   border-radius: 5px;
   color: var(--mainKalenderLabel);
+  font-size: 0.15rem;
 }
 div.kalender div.days label:last-child {
   margin-bottom: 0;
@@ -166,4 +166,5 @@ div#displayBook {
   bottom: 0;
   left: 0;
   z-index: 1999;
+  font-size: 0.14rem;
 }

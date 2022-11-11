@@ -5,12 +5,12 @@ main div.container div {
   padding: 10px 0;
 }
 main div.container div h1 {
-  font-size: 1.5rem;
+  font-size: 0.3rem;
   font-weight: normal;
   padding-top: 25px;
 }
 main div.container div i {
-  font-size: 0.8rem;
+  font-size: 0.1rem;
 }
 main div.container div img {
   border-radius: 5px;
