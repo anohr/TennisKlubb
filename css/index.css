@@ -5,7 +5,7 @@
   --mainKalenderDayBg: hsla(0, 0%, 25%, 1);
   --mainKalenderCheckerBgOne: hsla(0, 0%, 90%, 1);
   --mainKalenderCheckerBgTwo: hsla(0, 0%, 100%, 1);
-  --mainKalenderHoverChecker: hsla(298, 100%, 94%, 0.884);
+  --mainKalenderHoverChecker: hsla(74, 100%, 94%, 0.884);
   --mainKalenderToday: hsla(86, 100%, 87%, 0.884);
 }
 
@@ -81,10 +81,24 @@ main div.container div.days div.day.disable {
   background-color: transparent;
 }
 
-main div.container div.days div.day:hover:not(.disable) {
+main div.container div.days div.day:hover:not(.disable):not(.today):not(.booked) {
   background-color: var(--mainKalenderHoverChecker);
 }
 
 main div.container div.days div.day.today {
   background-color: var(--mainKalenderToday);
+}
+
+main div.container div.days div.day.booked {
+  background-color: hsla(45, 100%, 94%, 0.884);
+  font-weight: bold;
+}
+
+main div.container div.activityDiv {
+  margin: 20px 10px;
+  font-size: 0.15rem;
+}
+main div.container div.activityDiv h1 {
+  font-size: 0.25rem;
+  padding-bottom: 5px;
 }

@@ -1,5 +1,73 @@
+const dummyData = [
+  {
+    date: {
+      date: "2022-11-19",
+      time: "17:00",
+    },
+    activity: "Tävling",
+  },
+  {
+    date: {
+      date: "2022-11-24",
+      time: "11:00",
+    },
+    activity: "Träning",
+  },
+  {
+    date: {
+      date: "2022-11-24",
+      time: "13:00",
+    },
+    activity: "Träning",
+  },
+  {
+    date: {
+      date: "2022-11-24",
+      time: "15:00",
+    },
+    activity: "Träning",
+  },
+];
+
 const date = new Date();
 const year = date.getFullYear();
+
+const checkToday = (dateToCheck) => {
+  for (let i = 0; i < dummyData.length; i++) {
+    if (dateToCheck === dummyData[i].date.date) {
+      return true;
+    }
+  }
+};
+
+const displayActivity = (year, month, day) => {
+  let dateToDummy = year + "-" + month + "-" + day;
+
+  var myElem = document.querySelector(".activityDiv");
+  if (myElem !== null) {
+    myElem.remove();
+  }
+
+  const refDiv = document.querySelector(".days");
+  let activityDiv = document.createElement("div");
+
+  activityDiv.className = "activityDiv";
+
+  let activityDay = `<h1>Aktiviterer idag ${dateToDummy}</h1>`;
+
+  for (let i = 0; i < dummyData.length; i++) {
+    if (dummyData[i].date.date === dateToDummy) {
+      activityDay += dummyData[i].date.time;
+      activityDay += " ";
+      activityDay += dummyData[i].activity;
+      activityDay += "<br />";
+    }
+  }
+
+  activityDiv.innerHTML = activityDay;
+
+  refDiv.parentNode.insertBefore(activityDiv, refDiv.nextSibling);
+};
 
 const renderCalendar = () => {
   date.setDate(1);
@@ -26,10 +94,14 @@ const renderCalendar = () => {
   }
 
   for (let i = 1; i <= lastDay; i++) {
+    const checkDate = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + i;
+    if (checkToday === checkDate) {
+      console.log(checkToday, checkDate);
+    }
     if (year === date.getFullYear() && i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
-      days += `<div class="day today">${i}</div>`;
+      days += `<div class="day today ${checkToday(checkDate) ? "booked" : ""}" ${checkToday(checkDate) ? ' onClick="displayActivity(' + year + ", " + (date.getMonth() + 1) + ", " + i + ')"' : ""}>${i}</div>`;
     } else {
-      days += `<div class="day">${i}</div>`;
+      days += `<div class="day ${checkToday(checkDate) ? "booked" : ""}" ${checkToday(checkDate) ? ' onClick="displayActivity(' + year + ", " + (date.getMonth() + 1) + ", " + i + ')"' : ""}>${i}</div>`;
     }
   }
 

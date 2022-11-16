@@ -1,4 +1,4 @@
-function displayBook() {
+const displayBook = () => {
   const qdispBook = document.querySelector("#displayBook");
 
   let spelare = document.forms["bokning"]["spelare"].value;
@@ -27,4 +27,4 @@ function displayBook() {
 
     return false;
   }
-}
+};
