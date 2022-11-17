@@ -1,4 +1,6 @@
 :root {
+  /* --font-size: calc(4vw + 4vh + 2vmin); */
+  --font-size: 12px;
   --font: hsla(0, 0%, 63%, 0.75);
 
   --headerBg: hsla(0, 0%, 100%, 0.99);
@@ -25,11 +27,11 @@
 html {
   font-family: "Roboto Condensed", sans-serif;
   /* font-size: calc(10px + 0.4vw); */
-  font-size: calc(4vw + 4vh + 2vmin);
+  font-size: var(--font-size);
 }
 body {
   color: var(--font);
-  margin-top: 0.5rem;
+  margin-top: 8rem;
 }
 
 header,
@@ -39,7 +41,7 @@ nav,
 main div.container,
 footer div.wrapper {
   max-width: 100%;
-  font-size: 0.1rem;
+  font-size: 1rem;
 }
 
 header {
@@ -58,10 +60,11 @@ header nav {
   justify-content: center;
   margin: 0 auto;
   padding: 0 10px;
+  height: 7rem;
 }
 
 header nav div.logo {
-  font-size: 0.4rem;
+  font-size: 2.5rem;
 }
 header nav div.logo a {
   color: var(--logoFont);
@@ -72,7 +75,7 @@ header nav div.logo span {
 }
 
 header nav div.menu {
-  font-size: 0.11rem;
+  font-size: 1.3rem;
   text-align: right;
 }
 header nav div.menu a {
@@ -88,7 +91,6 @@ header nav div.menu a:hover {
 
 main div.container {
   margin: 0 auto;
-  margin-top: 30px;
   padding: 5px;
 }
 main div.container:first-child() {
@@ -109,7 +111,7 @@ footer div.wrapper {
   margin: 0 auto;
 }
 footer div.wrapper div.bottom {
-  font-size: 0.1rem;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -124,7 +126,7 @@ footer div.wrapper div.bottom {
   cursor: pointer;
   padding: 10px 20px 15px 20px;
   border-radius: 10px;
-  font-size: 0.15rem;
+  font-size: 2rem;
   transition: background-color 100ms;
   text-decoration: none;
 }
@@ -132,38 +134,47 @@ footer div.wrapper div.bottom {
   background-color: var(--topButtonBgHover);
 }
 
-@media screen and (min-width: 320px) {
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 8px;
+  }
   nav,
   main div.container,
   footer div.wrapper {
-    max-width: 98%;
+    max-width: 100%;
   }
 }
-@media screen and (min-width: 480px) {
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 10px;
+  }
   nav,
   main div.container,
   footer div.wrapper {
-    max-width: 470px;
+    max-width: 100%;
   }
 }
-@media screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
   nav,
   main div.container,
   footer div.wrapper {
-    max-width: 590px;
+    max-width: 100%;
   }
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 11px;
+  }
   nav,
   main div.container,
   footer div.wrapper {
-    max-width: 758px;
+    max-width: 100%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   nav,
   main div.container,
   footer div.wrapper {
-    max-width: 1014px;
+    max-width: 900px;
   }
 }

@@ -23,11 +23,11 @@ main div.container div.menu {
 }
 main div.container div.menu div.previous,
 main div.container div.menu div.next {
-  font-size: 0.1rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 main div.container div.menu div.center {
-  font-size: 0.2rem;
+  font-size: 2rem;
   font-weight: normal;
 }
 
@@ -37,7 +37,7 @@ main div.container div.menu div.center select {
   margin: 0;
   background-color: transparent;
   color: var(--mainDayH5);
-  font-size: 0.2rem;
+  font-size: 2rem;
   font-weight: normal;
   border: none;
   outline: none;
@@ -66,24 +66,23 @@ main div.container div.kalender div.days {
 }
 
 main div.container div.kalender div.days div.day:first-child h2 {
-  font-size: 0.2rem;
+  font-size: 1.3rem;
   font-weight: normal;
   color: var(--mainDayH2);
 }
 main div.container div.kalender div.days div.day:first-child h5 {
-  font-size: 0.11rem;
+  font-size: 0.75rem;
   margin-bottom: 10px;
   color: var(--mainDayH5);
   font-weight: normal;
 }
 
 main div.container fieldset {
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
   border: 1px solid var(--mainFieldset);
-}
-main div.container fieldset {
   margin-top: 15px;
+  font-size: 1.5rem;
 }
 main div.container fieldset:first-child {
   margin-top: 0;
@@ -104,6 +103,7 @@ main div.container div.form label {
   display: inline-block;
   padding: 0 15px;
   text-align: right;
+  font-size: 1.2rem;
 }
 main div.container button {
   margin-top: 20px;
@@ -124,7 +124,7 @@ div.kalender div.days label {
   width: 100%;
   border-radius: 5px;
   color: var(--mainKalenderLabel);
-  font-size: 0.15rem;
+  font-size: 1.1rem;
 }
 div.kalender div.days label:last-child {
   margin-bottom: 0;
@@ -164,6 +164,6 @@ div#displayBook {
   top: 0;
   left: 0;
   z-index: 1999;
-  font-size: 0.14rem;
+  font-size: 1.5rem;
   box-shadow: 0 0 15px hsla(0, 0%, 0%, 0.507);
 }

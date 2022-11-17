@@ -16,7 +16,7 @@ main div.container div.welcome {
   padding: 20px 0;
 }
 main div.container div.welcome h1 {
-  font-size: 0.5rem;
+  font-size: 4rem;
   color: var(--mainH1);
   text-shadow: 3px 0px 7px var(--mainWelcomeTextShadow), -3px 0px 7px var(--mainWelcomeTextShadow), 0px 4px 7px var(--mainWelcomeTextShadow);
 }
@@ -33,17 +33,17 @@ main div.container div.menu {
 }
 main div.container div.menu div.previous,
 main div.container div.menu div.next {
-  font-size: 0.1rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
 main div.container div.menu div.center {
-  font-size: 0.25rem;
+  font-size: 2rem;
   font-weight: normal;
 }
 
 main div.container div.menu div.center h5 {
-  font-size: 0.15rem;
+  font-size: 1.2rem;
   font-weight: normal;
 }
 
@@ -59,12 +59,12 @@ main div.container div.days {
 }
 main div.container div.days div.dayLabel {
   text-align: center;
-  font-size: 0.2rem;
+  font-size: 1.5rem;
   padding: 10px 0;
 }
 
 main div.container div.days div.day {
-  font-size: 0.15rem;
+  font-size: 1.2rem;
   padding: 10px;
   border-radius: 5px;
 }
@@ -96,9 +96,9 @@ main div.container div.days div.day.booked {
 
 main div.container div.activityDiv {
   margin: 20px 10px;
-  font-size: 0.15rem;
+  font-size: 1.3rem;
 }
 main div.container div.activityDiv h1 {
-  font-size: 0.25rem;
+  font-size: 2rem;
   padding-bottom: 5px;
 }
