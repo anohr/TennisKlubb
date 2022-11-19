@@ -1,33 +1,30 @@
-const dummyData = [
-  {
+const dummyDate = new Date();
+let dummyData = [];
+
+const activity = ["Träning", "Tävling", "Träning", "Underhåll", "F16 Träning", "P14 Träning"];
+
+let dummyYear = dummyDate.getFullYear();
+let dummyMonth = dummyDate.getMonth() + 1;
+let dummyDay = dummyDate.getDate();
+
+dummyDate.setDate(dummyDate.getDate() - 3);
+
+for (let i = 0; i < 7; i++) {
+  dummyMonth = dummyDate.getMonth() + 1;
+  dummyDay = dummyDate.getDate();
+
+  let addDataArray = {
     date: {
-      date: "2022-11-19",
-      time: "17:00",
+      date: dummyYear + "-" + dummyMonth + "-" + dummyDay,
+      time: Math.floor(Math.random() * 10 + 7) + ":00",
     },
-    activity: "Tävling",
-  },
-  {
-    date: {
-      date: "2022-11-24",
-      time: "11:00",
-    },
-    activity: "Träning",
-  },
-  {
-    date: {
-      date: "2022-11-24",
-      time: "13:00",
-    },
-    activity: "Träning",
-  },
-  {
-    date: {
-      date: "2022-11-24",
-      time: "15:00",
-    },
-    activity: "Träning",
-  },
-];
+    activity: activity[Math.floor(Math.random() * activity.length)],
+  };
+
+  dummyData.push(addDataArray);
+
+  dummyDate.setDate(dummyDate.getDate() + Math.floor(Math.random() * 3));
+}
 
 const date = new Date();
 const year = date.getFullYear();
@@ -53,7 +50,7 @@ const displayActivity = (year, month, day) => {
 
   activityDiv.className = "activityDiv";
 
-  let activityDay = `<h1>Aktiviterer idag ${dateToDummy}</h1>`;
+  let activityDay = `<h1>Aktiviteter ${dateToDummy}</h1>`;
 
   for (let i = 0; i < dummyData.length; i++) {
     if (dummyData[i].date.date === dateToDummy) {

@@ -1,6 +1,6 @@
-:root {
+main div.container div:not(:last-child) {
+  margin-bottom: 35px;
 }
-
 main div.container div h1 {
   font-size: 2.5rem;
   font-weight: normal;
@@ -12,5 +12,23 @@ main div.container div i {
 }
 main div.container div img {
   border-radius: 5px;
-  max-width: 50%;
+  max-width: 25%;
+  max-height: 25vw;
+}
+
+main div.container div div.flex {
+  display: flex;
+}
+
+main div.container div div.flex div h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+main div.container div div.flex div p {
+  margin-bottom: 10px;
+}
+main div.container div div.flex div {
+  padding: 10px 0px 0 25px;
+  font-size: 1.3rem;
 }

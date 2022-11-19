@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>.NET Tennis Klubb</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed" />
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/boka.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="shortcut icon" href="./favicon-16x16.png" type="image/x-icon" />
   </head>
   <body id="#top">
@@ -42,10 +42,14 @@
             <legend>Vem är du som bokar:</legend>
             <div class="form">
               <div>
-                <label for="fnamn">Förnamn </label>
-                <input type="text" id="fnamn" name="fname" required /><br />
-                <label for="enamn">Efternamn </label>
-                <input type="text" id="enamn" name="ename" required /><br />
+                <div class="textfield">
+                  <input type="text" id="fnamn" name="fname" placeholder=" " required />
+                  <label for="fnamn">Förnamn </label>
+                </div>
+                <div class="textfield">
+                  <input type="text" id="enamn" name="ename" placeholder=" " required />
+                  <label for="enamn">Efternamn </label>
+                </div>
               </div>
             </div>
           </fieldset>
@@ -66,7 +70,7 @@
               <div class="previous">« <a>förra veckan</a></div>
               <div class="center">
                 Boka tid på
-                <select class="bana" name="bana" required>
+                <select id="court" class="bana" name="bana" required>
                   <option value="1">Bana 1</option>
                   <option value="2">Bana 2</option>
                   <option value="3">Bana 3</option>

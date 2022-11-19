@@ -13,10 +13,10 @@ main div.container div.welcome {
   text-align: center;
   background-image: url("../img/rackets.jpg");
   border-radius: 7px;
-  padding: 20px 0;
+  padding: 6rem 0;
 }
 main div.container div.welcome h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--mainH1);
   text-shadow: 3px 0px 7px var(--mainWelcomeTextShadow), -3px 0px 7px var(--mainWelcomeTextShadow), 0px 4px 7px var(--mainWelcomeTextShadow);
 }
@@ -29,16 +29,16 @@ main div.container div.menu {
   grid-row-gap: 0px;
   text-align: center;
   align-items: end;
-  padding: 15px;
+  padding: 5px;
 }
 main div.container div.menu div.previous,
 main div.container div.menu div.next {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   cursor: pointer;
 }
 
 main div.container div.menu div.center {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: normal;
 }
 
@@ -54,13 +54,13 @@ main div.container div.days {
   text-align: center;
   justify-content: center;
   background-color: var(--mainKalenderBg);
-  border-radius: 2px;
+  border-radius: 5px;
   padding: 5px;
 }
 main div.container div.days div.dayLabel {
   text-align: center;
-  font-size: 1.5rem;
-  padding: 10px 0;
+  font-size: 1.4rem;
+  padding: 3px 0;
 }
 
 main div.container div.days div.day {
@@ -87,18 +87,27 @@ main div.container div.days div.day:hover:not(.disable):not(.today):not(.booked)
 
 main div.container div.days div.day.today {
   background-color: var(--mainKalenderToday);
+  font-weight: bold;
+  border: 1px solid #ccc;
 }
 
-main div.container div.days div.day.booked {
+main div.container div.days div.day.booked:not(.today) {
   background-color: hsla(45, 100%, 94%, 0.884);
   font-weight: bold;
+  border: 1px solid #ccc;
 }
 
 main div.container div.activityDiv {
-  margin: 20px 10px;
+  background-color: var(--mainKalenderBg);
+  padding: 10px;
   font-size: 1.3rem;
+  color: rgba(43, 43, 43, 0.486);
+  margin-top: 10px;
+  border-radius: 5px;
 }
 main div.container div.activityDiv h1 {
   font-size: 2rem;
-  padding-bottom: 5px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 7px;
 }
