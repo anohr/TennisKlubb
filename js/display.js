@@ -1,18 +1,18 @@
 const displayBook = () => {
-  const qdispBook = document.querySelector("#displayBook");
+  const qdispBook = document.querySelector('#displayBook');
 
-  let spelare = document.forms["bokning"]["spelare"].value;
-  let fnamn = document.forms["bokning"]["fnamn"].value;
-  let enamn = document.forms["bokning"]["enamn"].value;
-  let bastu = document.forms["bokning"]["bastu"].value;
-  let bana = document.forms["bokning"]["bana"].value;
-  let tid = document.forms["bokning"]["tid"].value;
+  let spelare = document.forms['bokning']['spelare'].value;
+  let fnamn = document.forms['bokning']['fnamn'].value;
+  let enamn = document.forms['bokning']['enamn'].value;
+  let bastu = document.forms['bokning']['bastu'].value;
+  let bana = document.forms['bokning']['bana'].value;
+  let tid = document.forms['bokning']['tid'].value;
 
-  if (fnamn === "" || enamn === "" || bastu === "" || bana === "" || tid === "") {
-    alert("Tomma fält...");
+  if (fnamn === '' || enamn === '' || bastu === '' || bana === '' || tid === '') {
+    alert('Tomma fält...');
     return false;
   } else {
-    qdispBook.style.display = "block";
+    qdispBook.style.display = 'block';
 
     let days = `<h1>Du har bokat:</h1>`;
 

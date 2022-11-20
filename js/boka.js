@@ -1,25 +1,25 @@
-const firstNames = ["Maria", "Erik", "Anna", "Lars", "Elisabeth", "Anders", "Eva", "Johan", "Kristina", "Per"];
+const firstNames = ['Maria', 'Erik', 'Anna', 'Lars', 'Elisabeth', 'Anders', 'Eva', 'Johan', 'Kristina', 'Per'];
 const lastNames = [
-  "Nilsson",
-  "Persson",
-  "Andersson",
-  "Jönsson",
-  "Olsson",
-  "Svensson",
-  "Johansson",
-  "Larsson",
-  "Persdotter",
-  "Hansson",
-  "Dalmark",
-  "Hagwik",
-  "Hammarhamn",
-  "Järnhed",
-  "Korshage",
-  "Rudslott",
-  "Skönbacka",
-  "Skönedal",
-  "Talllund",
-  "Widedhal",
+  'Nilsson',
+  'Persson',
+  'Andersson',
+  'Jönsson',
+  'Olsson',
+  'Svensson',
+  'Johansson',
+  'Larsson',
+  'Persdotter',
+  'Hansson',
+  'Dalmark',
+  'Hagwik',
+  'Hammarhamn',
+  'Järnhed',
+  'Korshage',
+  'Rudslott',
+  'Skönbacka',
+  'Skönedal',
+  'Talllund',
+  'Widedhal',
 ];
 
 let generatedDummyData = [];
@@ -28,20 +28,34 @@ let toDayDate = new Date();
 
 singelDummyData = {
   players: 2,
-  firstname: "John",
-  lastname: "Danielsson",
+  firstname: 'John',
+  lastname: 'Danielsson',
   saunatime: 0,
   courtNr: 2,
   date: {
-    bookDate: toDayDate.getFullYear() + "-" + (toDayDate.getMonth() + 1) + "-" + toDayDate.getDate(),
-    bookTime: toDayDate.getHours + ":00",
+    bookDate: toDayDate.getFullYear() + '-' + (toDayDate.getMonth() + 1) + '-' + toDayDate.getDate(),
+    bookTime: toDayDate.getHours + ':00',
+  },
+};
+
+generatedDummyData.push(singelDummyData);
+
+singelDummyData = {
+  players: 3,
+  firstname: 'Adam',
+  lastname: 'Johnsson',
+  saunatime: 1,
+  courtNr: 1,
+  date: {
+    bookDate: toDayDate.getFullYear() + '-' + (toDayDate.getMonth() + 1) + '-' + toDayDate.getDate(),
+    bookTime: toDayDate.getHours + ':00',
   },
 };
 
 generatedDummyData.push(singelDummyData);
 
 for (let i = 0; i < 7; i++) {
-  for (let j = 0; j < 10; j++) {
+  for (let j = 0; j < 20; j++) {
     let dupe = false;
 
     let thisYear = toDayDate.getFullYear();
@@ -55,10 +69,10 @@ for (let i = 0; i < 7; i++) {
     let lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
     let saunaTime = Math.floor(Math.random() * 2);
     let courtNr = Math.floor(Math.random() * 3 + 1);
-    let genDate = thisYear + "-" + thisMonth + "-" + thisDay;
-    let genTime = thisHour + ":00";
+    let genDate = thisYear + '-' + thisMonth + '-' + thisDay;
+    let genTime = thisHour + ':00';
 
-    for (let x = 0; x < generatedDummyData.length; x++) {
+    for (let x = 0; x <= generatedDummyData.length - 1; x++) {
       if (generatedDummyData[i].courtNr === courtNr) {
         if (generatedDummyData[x].date.bookDate == genDate && generatedDummyData[x].date.bookTime == genTime) {
           dupe = true;
@@ -79,11 +93,7 @@ for (let i = 0; i < 7; i++) {
         },
       };
 
-      let saveOrNot = Math.floor(Math.random() * 3 + 1);
-
-      if (saveOrNot === 1) {
-        generatedDummyData.push(singelDummyData);
-      }
+      generatedDummyData.push(singelDummyData);
     }
   }
 
@@ -91,8 +101,8 @@ for (let i = 0; i < 7; i++) {
 }
 
 const checkForActivity = (year, month, day, courtNr, hour) => {
-  let checkDate = year + "-" + month + "-" + day;
-  let checkTime = hour + ":00";
+  let checkDate = year + '-' + month + '-' + day;
+  let checkTime = hour + ':00';
 
   for (let i = 0; i < generatedDummyData.length; i++) {
     if (checkDate === generatedDummyData[i].date.bookDate && checkTime === generatedDummyData[i].date.bookTime && +courtNr === generatedDummyData[i].courtNr) {
@@ -105,11 +115,11 @@ const date = new Date();
 const year = date.getFullYear();
 
 const renderCalendar = (choosenCourt) => {
-  const monthDays = document.querySelector(".kalender");
+  const monthDays = document.querySelector('.kalender');
 
   let court = choosenCourt;
 
-  const dayName = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"];
+  const dayName = ['Söndag', 'Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag'];
 
   let days = ``;
   let x = 0;
@@ -123,10 +133,12 @@ const renderCalendar = (choosenCourt) => {
     days += `<div class="day"><h2>${dayName[date.getDay()]}</h2><h5><span>${year}-${month}-</span>${day}</h5></div>`;
     for (let i = 1; i <= 11; i++) {
       let hour = i + 6;
-      days += `<input type="radio" id="${x}" name="tid" value="${year}-${month}-${day} ${i + 6}:00" ${checkForActivity(year, month, day, court, hour) ? "disabled" : ""}><label class="${
-        checkForActivity(year, month, day, court, hour) ? "taken" : ""
-      }" for="${x}">${hour}:00</label>`;
-      x++;
+      if (!checkForActivity(year, month, day, court, hour)) {
+        days += `<input type="radio" id="${x}" name="tid" value="${year}-${month}-${day} ${i + 6}:00" ${checkForActivity(year, month, day, court, hour) ? 'disabled' : ''}><label class="${
+          checkForActivity(year, month, day, court, hour) ? 'taken' : ''
+        }" for="${x}">${hour}:00</label>`;
+        x++;
+      }
     }
     days += `</div>`;
     date.setDate(date.getDate() + 1);
@@ -137,22 +149,20 @@ const renderCalendar = (choosenCourt) => {
   date.setDate(date.getDate() - 7);
 };
 
-document.querySelector(".previous").addEventListener("click", () => {
+document.querySelector('.previous').addEventListener('click', () => {
   if (date.getFullYear() === new Date().getFullYear() && date.getDate() === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
-    alert("Du kan ju inte boka dagar som redan passerat...");
+    alert('Du kan ju inte boka dagar som redan passerat...');
   } else {
     date.setDate(date.getDate() - 7);
     renderCalendar();
   }
 });
 
-document.querySelector(".next").addEventListener("click", () => {
+document.querySelector('.next').addEventListener('click', () => {
   date.setDate(date.getDate() + 7);
   renderCalendar();
 });
 
-let choosenCourt = document.getElementById("court").value;
-
-console.log(choosenCourt);
+let choosenCourt = document.getElementById('court').value;
 
 renderCalendar(choosenCourt);

@@ -11,7 +11,7 @@
 
 main div.container div.welcome {
   text-align: center;
-  background-image: url("../img/rackets.jpg");
+  background-image: url('../img/rackets.jpg');
   border-radius: 7px;
   padding: 6rem 0;
 }
