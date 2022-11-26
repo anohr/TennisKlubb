@@ -48,6 +48,7 @@ header {
   left: 0;
   width: 100%;
   background-color: var(--headerBg);
+  z-index: 1000;
 }
 
 header nav {
@@ -153,6 +154,12 @@ footer div.wrapper div.bottom {
   main div.container,
   footer div.wrapper {
     max-width: 100%;
+  }
+  main > form > div > fieldset:nth-child(4) {
+    padding: 15px 0 0 0;
+  }
+  main > form > div > fieldset:nth-child(4) > div.kalender {
+    padding: 0;
   }
 }
 @media (374px < width < 769px) {

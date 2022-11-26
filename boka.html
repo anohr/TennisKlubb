@@ -43,11 +43,11 @@
             <div class="form">
               <div>
                 <div class="textfield">
-                  <input type="text" id="fnamn" name="fname" placeholder=" " required />
+                  <input type="text" id="fnamn" name="fname" placeholder=" " pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Endast bokstäver är godkända och ej tomtfält!')" required />
                   <label for="fnamn">Förnamn </label>
                 </div>
                 <div class="textfield">
-                  <input type="text" id="enamn" name="ename" placeholder=" " required />
+                  <input type="text" id="enamn" name="ename" placeholder=" " pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Endast bokstäver är godkända och ej tomtfält!')" required />
                   <label for="enamn">Efternamn </label>
                 </div>
               </div>
@@ -66,17 +66,12 @@
           </fieldset>
           <fieldset>
             <legend>Välj en bana och ledig tid:</legend>
-            <div class="menu">
-              <div class="previous">« <a>förra veckan</a></div>
-              <div class="center">
-                Boka tid på
-                <select id="court" class="bana" name="bana" required>
-                  <option value="1">Bana 1</option>
-                  <option value="2">Bana 2</option>
-                  <option value="3">Bana 3</option>
-                </select>
-              </div>
-              <div class="next"><a>nästa vecka</a> »</div>
+            <div class="court">
+              <select id="court" class="bana" name="bana" required>
+                <option value="1">Bana 1</option>
+                <option value="2">Bana 2</option>
+                <option value="3">Bana 3</option>
+              </select>
             </div>
             <div class="kalender"></div>
           </fieldset>

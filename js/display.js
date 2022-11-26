@@ -9,7 +9,7 @@ const displayBook = () => {
   let tid = document.forms['bokning']['tid'].value;
 
   if (fnamn === '' || enamn === '' || bastu === '' || bana === '' || tid === '') {
-    alert('Tomma fält...');
+    alert('Du måste fylla i alla fält för att kunna boka...');
     return false;
   } else {
     qdispBook.style.display = 'block';
@@ -24,6 +24,9 @@ const displayBook = () => {
     days += `Datum: ${tid} <br />`;
 
     qdispBook.innerHTML = days;
+
+    document.getElementById('fnamn').value = '';
+    document.getElementById('enamn').value = '';
 
     return false;
   }

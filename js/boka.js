@@ -26,34 +26,6 @@ let generatedDummyData = [];
 
 let toDayDate = new Date();
 
-singelDummyData = {
-  players: 2,
-  firstname: 'John',
-  lastname: 'Danielsson',
-  saunatime: 0,
-  courtNr: 2,
-  date: {
-    bookDate: toDayDate.getFullYear() + '-' + (toDayDate.getMonth() + 1) + '-' + toDayDate.getDate(),
-    bookTime: toDayDate.getHours + ':00',
-  },
-};
-
-generatedDummyData.push(singelDummyData);
-
-singelDummyData = {
-  players: 3,
-  firstname: 'Adam',
-  lastname: 'Johnsson',
-  saunatime: 1,
-  courtNr: 1,
-  date: {
-    bookDate: toDayDate.getFullYear() + '-' + (toDayDate.getMonth() + 1) + '-' + toDayDate.getDate(),
-    bookTime: toDayDate.getHours + ':00',
-  },
-};
-
-generatedDummyData.push(singelDummyData);
-
 for (let i = 0; i < 7; i++) {
   for (let j = 0; j < 20; j++) {
     let dupe = false;
@@ -134,9 +106,7 @@ const renderCalendar = (choosenCourt) => {
     for (let i = 1; i <= 11; i++) {
       let hour = i + 6;
       if (!checkForActivity(year, month, day, court, hour)) {
-        days += `<input type="radio" id="${x}" name="tid" value="${year}-${month}-${day} ${i + 6}:00" ${checkForActivity(year, month, day, court, hour) ? 'disabled' : ''}><label class="${
-          checkForActivity(year, month, day, court, hour) ? 'taken' : ''
-        }" for="${x}">${hour}:00</label>`;
+        days += `<input type="radio" id="${x}" class="tid" name="tid" value="${year}-${month}-${day} ${i + 6}:00" ${checkForActivity(year, month, day, court, hour) ? 'disabled' : ''}><label for="${x}">${hour}:00</label>`;
         x++;
       }
     }
@@ -149,20 +119,24 @@ const renderCalendar = (choosenCourt) => {
   date.setDate(date.getDate() - 7);
 };
 
-document.querySelector('.previous').addEventListener('click', () => {
-  if (date.getFullYear() === new Date().getFullYear() && date.getDate() === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
-    alert('Du kan ju inte boka dagar som redan passerat...');
-  } else {
-    date.setDate(date.getDate() - 7);
-    renderCalendar();
-  }
-});
+// document.querySelector('.previous').addEventListener('click', () => {
+//   if (date.getFullYear() === new Date().getFullYear() && date.getDate() === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
+//     alert('Du kan ju inte boka dagar som redan passerat...');
+//   } else {
+//     date.setDate(date.getDate() - 7);
+//     renderCalendar();
+//   }
+// });
 
-document.querySelector('.next').addEventListener('click', () => {
-  date.setDate(date.getDate() + 7);
-  renderCalendar();
-});
+// document.querySelector('.next').addEventListener('click', () => {
+//   date.setDate(date.getDate() + 7);
+//   renderCalendar();
+// });
 
-let choosenCourt = document.getElementById('court').value;
+let choosenCourt = document.getElementById('court');
 
-renderCalendar(choosenCourt);
+renderCalendar(choosenCourt.value);
+
+document.getElementById('court').onchange = function () {
+  renderCalendar(document.getElementById('court').value);
+};
