@@ -133,6 +133,10 @@ footer div.wrapper div.bottom {
   background-color: var(--topButtonBgHover);
 }
 
+div.menu-low {
+  display: none;
+}
+
 @media (width <= 375px) {
   html {
     font-size: 10px;
@@ -161,6 +165,44 @@ footer div.wrapper div.bottom {
   main > form > div > fieldset:nth-child(4) > div.kalender {
     padding: 0;
   }
+  div.menu {
+    display: none;
+  }
+
+  div.menu-low {
+    position: absolute;
+    display: inline-block;
+    text-align: right;
+    z-index: 9999;
+    right: 0;
+    top: 0;
+  }
+  div.menu-low i {
+    font-size: 2rem;
+    padding: 25px 10px 5px 0;
+  }
+  div.menu-low nav.nav {
+    display: none;
+  }
+  div.menu-low input#side-menu {
+    display: none;
+  }
+  div.menu-low input#side-menu:checked ~ nav,
+  div.menu-low:hover input#side-menu ~ nav {
+    display: initial;
+  }
+  div.menu-low nav.nav a {
+    display: flex;
+    background-color: #fff;
+    color: var(--navLink);
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-bottom-left-radius: 5px;
+  }
+  div.menu-low nav.nav a:hover {
+    color: var(--navLinkHover);
+  }
 }
 @media (374px < width < 769px) {
   html {
@@ -177,7 +219,7 @@ footer div.wrapper div.bottom {
 }
 @media (width > 900px) {
   html {
-    font-size: 14px;
+    font-size: 16px;
   }
   nav,
   main div.container,
