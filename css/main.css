@@ -2,16 +2,19 @@
   --font-size: 62.5%;
   --font: hsla(0, 0%, 63%, 0.75);
 
-  --headerBg: hsla(0, 0%, 100%, 0.99);
+  --bgColor: hsla(0, 0%, 89%, 0.25);
+
+  --headerBg: hsla(0, 0%, 100%, 1);
 
   --logoFont: var(--navMenu);
   --logoFontSecond: hsla(0, 59%, 58%, 0.75);
 
+  --navBgColor: hsla(223, 100%, 91%, 1);
   --navLink: var(--logoFont);
   --navLinkHover: var(--logoFontSecond);
 
-  --mainLink: hsla(350, 100%, 73%, 0.99);
-  --mainLinkHover: hsla(350, 100%, 73%, 0.5);
+  --mainLink: hsla(0, 59%, 58%, 0.75);
+  --mainLinkHover: hsla(0, 59%, 58%, 0.5);
 
   --topButton: hsla(0, 0%, 100%, 1);
   --topButtonBg: hsla(0, 0%, 33%, 0.4);
@@ -29,6 +32,7 @@ html {
 }
 body {
   color: var(--font);
+  background-color: var(--bgColor);
 }
 
 header,
@@ -48,6 +52,7 @@ header {
   width: 100%;
   background-color: var(--headerBg);
   z-index: 1000;
+  box-shadow: 0px 0px 10px #000;
 }
 
 header nav {
@@ -91,7 +96,7 @@ main div.container {
   padding: 0.5rem;
 }
 main div.container:first-child {
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
 main div.container a {
   color: var(--mainLink);
