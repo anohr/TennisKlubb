@@ -1,5 +1,5 @@
 main div.container div:not(:last-child) {
-  margin-bottom: 35px;
+  margin-bottom: 3.5rem;
 }
 main div.container div h1 {
   font-size: 2.5rem;
@@ -11,7 +11,7 @@ main div.container div i {
   font-size: 1.2rem;
 }
 main div.container div img {
-  border-radius: 5px;
+  border-radius: 0.5rem;
   max-width: 25%;
   max-height: 25vw;
 }
@@ -23,12 +23,12 @@ main div.container div div.flex {
 main div.container div div.flex div h2 {
   font-size: 2rem;
   font-weight: normal;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 main div.container div div.flex div p {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 main div.container div div.flex div {
-  padding: 10px 0px 0 25px;
+  padding: 0.3rem 0 0 2rem;
   font-size: 1.3rem;
 }

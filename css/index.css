@@ -12,61 +12,61 @@
 main div.container div.welcome {
   text-align: center;
   background-image: url('../img/rackets.jpg');
-  border-radius: 7px;
+  border-radius: 0.7rem;
   padding: 6rem 0;
 }
 main div.container div.welcome h1 {
   font-size: 3rem;
   color: var(--mainH1);
-  text-shadow: 3px 0px 7px var(--mainWelcomeTextShadow), -3px 0px 7px var(--mainWelcomeTextShadow), 0px 4px 7px var(--mainWelcomeTextShadow);
+  text-shadow: 0.3rem 0 0.7rem var(--mainWelcomeTextShadow), -0.3rem 0 0.7rem var(--mainWelcomeTextShadow), 0 0.4rem 0.7rem var(--mainWelcomeTextShadow);
 }
 
 main div.container div.menu {
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-rows: 1fr;
-  grid-column-gap: 5px;
-  grid-row-gap: 0px;
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0;
   text-align: center;
   align-items: end;
-  padding: 5px;
+  padding: 0.5rem;
 }
 main div.container div.menu div.previous,
 main div.container div.menu div.next {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   cursor: pointer;
 }
 
 main div.container div.menu div.center {
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: normal;
 }
 
 main div.container div.menu div.center h5 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: normal;
 }
 
 main div.container div.days {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 5px 5px;
+  gap: 0.5rem 0.5rem;
   text-align: center;
   justify-content: center;
   background-color: var(--mainKalenderBg);
-  border-radius: 5px;
-  padding: 5px;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 main div.container div.days div.dayLabel {
   text-align: center;
   font-size: 1.4rem;
-  padding: 3px 0;
+  padding: 0.3rem 0;
 }
 
 main div.container div.days div.day {
-  font-size: 1.2rem;
-  padding: 10px;
-  border-radius: 5px;
+  font-size: 1.4rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 main div.container div.days div.day:nth-child(even) {
   background-color: var(--mainKalenderCheckerBgOne);
@@ -88,26 +88,27 @@ main div.container div.days div.day:hover:not(.disable):not(.today):not(.booked)
 main div.container div.days div.day.today {
   background-color: var(--mainKalenderToday);
   font-weight: bold;
-  border: 1px solid #ccc;
+  border: 0.1rem solid #ccc;
 }
 
 main div.container div.days div.day.booked:not(.today) {
   background-color: hsla(45, 100%, 94%, 0.884);
   font-weight: bold;
-  border: 1px solid #ccc;
+  border: 0.1rem solid #ccc;
 }
 
 main div.container div.activityDiv {
   background-color: var(--mainKalenderBg);
-  padding: 10px;
+  padding: 1rem;
   font-size: 1.3rem;
   color: rgba(43, 43, 43, 0.486);
-  margin-top: 10px;
-  border-radius: 5px;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
 }
 main div.container div.activityDiv h1 {
   font-size: 2rem;
+  font-weight: normal;
   padding: 0;
   margin: 0;
-  padding-bottom: 7px;
+  padding-bottom: 0.7rem;
 }

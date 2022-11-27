@@ -1,5 +1,5 @@
 :root {
-  --font-size: 16px;
+  --font-size: 62.5%;
   --font: hsla(0, 0%, 63%, 0.75);
 
   --headerBg: hsla(0, 0%, 100%, 0.99);
@@ -29,7 +29,6 @@ html {
 }
 body {
   color: var(--font);
-  margin-top: 8rem;
 }
 
 header,
@@ -58,8 +57,7 @@ header nav {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  padding: 0 10px;
-  height: 7rem;
+  padding: 1.25rem 1rem;
 }
 
 header nav div.logo {
@@ -74,7 +72,7 @@ header nav div.logo span {
 }
 
 header nav div.menu {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: right;
 }
 header nav div.menu a {
@@ -90,10 +88,10 @@ header nav div.menu a:hover {
 
 main div.container {
   margin: 0 auto;
-  padding: 5px;
+  padding: 0.5rem;
 }
-main div.container:first-child() {
-  margin-top: 0;
+main div.container:first-child {
+  margin-top: 6rem;
 }
 main div.container a {
   color: var(--mainLink);
@@ -104,7 +102,7 @@ main div.container a:hover {
 }
 
 footer {
-  margin: 25px 0;
+  margin: 2.5rem 0;
 }
 footer div.wrapper {
   margin: 0 auto;
@@ -117,14 +115,14 @@ footer div.wrapper div.bottom {
 #myBtn {
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 2rem;
+  right: 3rem;
   z-index: 99;
   background-color: var(--topButtonBg);
   color: var(--topButton);
   cursor: pointer;
-  padding: 10px 20px 15px 20px;
-  border-radius: 10px;
+  padding: 1rem 2rem 1.5rem 2rem;
+  border-radius: 1rem;
   font-size: 2rem;
   transition: background-color 100ms;
   text-decoration: none;
@@ -138,29 +136,8 @@ div.menu-low {
 }
 
 @media (width <= 375px) {
-  html {
-    font-size: 10px;
-  }
-  main div.container div.days div.dayLabel {
-    font-size: 1.1rem;
-    padding: 3px 0;
-  }
-  main div.container div.kalender div.days div.day:first-child h2 {
-    font-size: 1rem;
-  }
-  main div.container div.kalender div.days div.day:first-child h5 {
-    font-size: 0.9rem;
-  }
-  main div.container div.kalender div.days div.day:first-child h5 span {
-    display: none;
-  }
-  nav,
-  main div.container,
-  footer div.wrapper {
-    max-width: 100%;
-  }
   main > form > div > fieldset:nth-child(4) {
-    padding: 15px 0 0 0;
+    padding: 1.5rem 0 0 0;
   }
   main > form > div > fieldset:nth-child(4) > div.kalender {
     padding: 0;
@@ -170,7 +147,7 @@ div.menu-low {
   }
 
   div.menu-low {
-    position: absolute;
+    position: fixed;
     display: inline-block;
     text-align: right;
     z-index: 9999;
@@ -179,7 +156,7 @@ div.menu-low {
   }
   div.menu-low i {
     font-size: 2rem;
-    padding: 25px 10px 5px 0;
+    padding: 1.75rem 2rem;
   }
   div.menu-low nav.nav {
     display: none;
@@ -195,35 +172,43 @@ div.menu-low {
     display: flex;
     background-color: #fff;
     color: var(--navLink);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-decoration: none;
-    padding: 10px 15px;
-    border-bottom-left-radius: 5px;
+    padding: 1rem 7rem 1rem 1.5rem;
+  }
+  div.menu-low nav.nav a:last-child {
+    border-bottom-left-radius: 0.5rem;
+  }
+  div.menu-low nav.nav a:hover {
+    background-color: rgba(238, 238, 238, 1);
   }
   div.menu-low nav.nav a:hover {
     color: var(--navLinkHover);
   }
 }
-@media (374px < width < 769px) {
-  html {
-    font-size: 11px;
-  }
-  main div.container div.kalender div.days div.day:first-child h5 {
-    font-size: 0.8rem;
-  }
+@media (width < 769px) {
   nav,
   main div.container,
   footer div.wrapper {
     max-width: 100%;
   }
+  main div.container div.kalender div.days div.day:first-child h5 span {
+    display: none;
+  }
+  div.kalender div.days label {
+    font-size: 1.3rem;
+  }
 }
 @media (width > 900px) {
-  html {
-    font-size: 16px;
+  main div.container div.kalender div.days div.day:first-child h2 {
+    font-size: 2rem;
+  }
+  div.kalender div.days label {
+    font-size: 1.5rem;
   }
   nav,
   main div.container,
   footer div.wrapper {
-    max-width: 900px;
+    max-width: 90rem;
   }
 }

@@ -12,28 +12,28 @@
 }
 
 main div.container fieldset {
-  border-radius: 5px;
+  border-radius: 0.5rem;
   background-color: rgba(224, 224, 224, 0.5);
   border: none;
-  font-size: 1.3rem;
-  padding: 15px 0 15px 10px;
+  font-size: 1.5rem;
+  padding: 1.5rem 0 1.5rem 1rem;
   margin-bottom: 20px;
 }
 main div.container fieldset legend {
   color: #666;
   background-color: #fff;
-  padding: 5px 10px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  padding: 0.5rem 1rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 main form div.container fieldset div.form div select.spelare {
   color: #333;
   background-color: transparent;
   border: none;
-  padding: 0 10px;
+  padding: 0 1rem;
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: normal;
   outline: none;
 }
@@ -46,15 +46,15 @@ main form div.container fieldset div.form div select.spelare option {
 }
 
 main div.container div.court {
-  margin-bottom: 25px;
-  padding-left: 5px;
+  margin-bottom: 2.5rem;
+  padding-left: 0.5rem;
 }
 
 main div.container div.court select#court {
   color: #666;
   background-color: transparent;
   border: none;
-  padding: 0 10px;
+  padding: 0 1rem;
   margin: 0;
   font-size: 1.3rem;
   font-weight: normal;
@@ -74,32 +74,32 @@ main div.container div.kalender {
   grid-template-rows: 1fr;
   grid-gap: 0;
   text-align: center;
-  padding-right: 10px;
+  padding-right: 1rem;
 }
 
 main div.container div.kalender div.days {
-  padding: 5px;
+  padding: 0.5rem;
 }
 main div.container div.kalender div.days:not(:first-child) {
-  border-left: 1px solid #ccc;
+  border-left: 0.1rem solid #ccc;
 }
 
 main div.container div.kalender div.days div.day:first-child h2 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: normal;
   color: var(--mainDayH2);
 }
 main div.container div.kalender div.days div.day:first-child h5 {
-  font-size: 0.9rem;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   color: var(--mainDayH5);
   font-weight: normal;
 }
 
 main div.container div.form input {
   border: none;
-  border-bottom: 1px solid var(--mainFieldset);
-  padding: 3px 8px;
+  border-bottom: 0.1rem solid var(--mainFieldset);
+  padding: 0.3rem 0.8rem;
 }
 main div.container div.form input:focus {
   outline: none;
@@ -107,16 +107,16 @@ main div.container div.form input:focus {
 main div.container div.form label {
   color: #666;
   display: inline-block;
-  padding: 0 15px;
+  padding: 0 1.5rem;
   text-align: right;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 main div.container button {
-  margin-top: 20px;
+  margin-top: 2rem;
   width: 10rem;
-  border-radius: 5px;
-  border: 1px solid var(--mainFieldset);
-  padding: 10px;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--mainFieldset);
+  padding: 1rem;
 }
 
 div.kalender div.days input {
@@ -125,13 +125,13 @@ div.kalender div.days input {
 
 div.kalender div.days label {
   display: inline-block;
-  padding: 10px 0;
-  margin-bottom: 5px;
+  padding: 0.75rem 0;
+  margin-bottom: 0.5rem;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   color: var(--mainKalenderLabel);
-  font-size: 1.1rem;
-  border: 1px solid #ccc;
+  font-size: 1.2rem;
+  border: 0.1rem solid #ccc;
 }
 div.kalender div.days label:last-child {
   margin-bottom: 0;
@@ -140,7 +140,7 @@ div.kalender div.days label:last-child {
 div.kalender div.days input:checked + label {
   background: var(--mainDayTimeHover);
   color: rgb(51, 51, 51);
-  border: 1px solid #ccc;
+  border: 0.1rem solid #ccc;
 }
 
 div.kalender div.days label:nth-of-type(even) {
@@ -166,29 +166,30 @@ main form div.container fieldset div.form div {
 
 main form div.container fieldset div.form div div.textfield {
   position: relative;
-  margin-left: 10px;
+  margin-left: 1rem;
 }
 main form div.container fieldset div.form div div.textfield label {
   position: absolute;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  background-color: white;
-  color: gray;
-  padding: 0 5px;
-  margin: 0 5px;
+  background-color: transparent;
+  color: var(--mainDayH2);
+  padding: 0 0.5rem;
+  margin: 0 0.5rem;
   transition: 0.1s ease-out;
   transform-origin: left top;
   pointer-events: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 main form div.container fieldset div.form div div.textfield input {
-  font-size: 1rem;
+  font-size: 1.3rem;
+  max-width: 12.5rem;
   outline: none;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px 5px;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.5rem;
+  padding: 1rem 0.5rem;
   color: gray;
   transition: 0.1s ease-out;
 }
@@ -196,9 +197,11 @@ main form div.container fieldset div.form div div.textfield input:focus {
   border-color: var(--mainDayH2);
 }
 main form div.container fieldset div.form div div.textfield input:focus + label {
-  color: var(--mainDayH2);
-  top: 0;
+  color: #fff;
+  background-color: var(--mainDayH2);
+  top: -0.5rem;
   transform: translateY(-50%) scale(0.9);
+  padding: 0.5rem;
 }
 main form div.container fieldset div.form div div.textfield input:not(:placeholder-shown) + label {
   top: 0;
@@ -210,13 +213,13 @@ div#displayBook {
   display: none;
   position: fixed;
   background-color: #fff;
-  border-bottom: 5px solid pink;
-  border-right: 5px solid pink;
-  border-bottom-right-radius: 10px;
-  padding: 10px;
+  border-bottom: 0.5rem solid pink;
+  border-right: 0.5rem solid pink;
+  border-bottom-right-radius: 1rem;
+  padding: 1rem;
   top: 0;
   left: 0;
   z-index: 1999;
   font-size: 1.5rem;
-  box-shadow: 0 0 15px hsla(0, 0%, 0%, 0.507);
+  box-shadow: 0 0 1.5rem hsla(0, 0%, 0%, 0.5);
 }
